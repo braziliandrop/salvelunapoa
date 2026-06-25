@@ -131,7 +131,7 @@ export function Story() {
                 Situação atual
               </h3>
               <p className="mt-1 text-sm leading-relaxed text-slate-600">
-                Luna está no quarto dia de pós-operatório. Apesar de estar
+                Luna está no quinto dia de pós-operatório. Apesar de estar
                 reagindo bem à recuperação, os exames ainda mostram alterações
                 importantes. O rim esquerdo permanece obstruído por cálculos e
                 encontra-se sobrecarregado. A condição impede a eliminação
