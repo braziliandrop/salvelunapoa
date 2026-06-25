@@ -11,18 +11,18 @@ function Counter() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const [raised, setRaised] = useState(0);
   const goal = 15000;
-  const [donors] = useState(20);
+  const [donors] = useState(23);
 
   useEffect(() => {
     if (!inView) return;
     const duration = 1800;
     const start = performance.now();
-    const target = Math.round(goal * 0.07);
+    const target = 1197.23;
     let raf = 0;
     const tick = (t: number) => {
       const progress = Math.min(1, (t - start) / duration);
       const eased = 1 - Math.pow(1 - progress, 3);
-      setRaised(Math.round(target * eased));
+      setRaised(Number((target * eased).toFixed(2)));
       if (progress < 1) raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
@@ -47,7 +47,8 @@ function Counter() {
           {raised.toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL",
-            maximumFractionDigits: 0,
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
           })}
         </span>
       </div>
