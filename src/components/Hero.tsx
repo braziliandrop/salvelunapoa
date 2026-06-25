@@ -17,7 +17,7 @@ function Counter() {
     if (!inView) return;
     const duration = 1800;
     const start = performance.now();
-    const target = 1197.23;
+    const target = 1197.82;
     let raf = 0;
     const tick = (t: number) => {
       const progress = Math.min(1, (t - start) / duration);
