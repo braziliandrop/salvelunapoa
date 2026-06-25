@@ -11,13 +11,13 @@ function Counter() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const [raised, setRaised] = useState(0);
   const goal = 15000;
-  const [donors] = useState(23);
+  const [donors] = useState(27);
 
   useEffect(() => {
     if (!inView) return;
     const duration = 1800;
     const start = performance.now();
-    const target = 1197.82;
+    const target = 1329.82;
     let raf = 0;
     const tick = (t: number) => {
       const progress = Math.min(1, (t - start) / duration);
